@@ -10,7 +10,7 @@ const handleSubmit = (name, pass, email) => {
   const Pass = pass;
   const Name = name;
 
-  axios.post('https://paper-trade-back-end-1.onrender.com/register', { 'name':Name, 'mail':Email, 'pass':Pass, money:1000000,holdings:{} })
+  axios.post('https://paper-trade-back-end-1.onrender.com/register', { 'name':Name, 'mail':Email, 'pass':Pass, money:1000000,holdings:[] })
     .then(result => {
       console.log(result);
       if(result.data.status==='failed'){
