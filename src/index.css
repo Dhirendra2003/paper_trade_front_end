@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,html{
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  transition: 0.5s ease-in-out;
+  scroll-behavior: smooth;
+}
+*:hover {
+  transition: 0.5s ease-in-out;
+}
+
+.bgimg {
+  background-image: url("./components/images/bgnew.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bgl1 {
+  background-image: url("./components/images/block-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+.bgl2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: black;
+}
+.bgl3 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-image: url("./components/images/block-6.png");
+}
+
+
+.bgl5 {
+  position: relative;
+}
+
+.bgl5::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./components/images/block-5.png');
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+   /* Adjust as needed */
+  transform: rotate(180deg); /* Adjust the angle of rotation as needed */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+.loginbg{
+
+  background-image: url('./components/images/Login.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.gap-even *{
+width:20%;
+text-align: center;
+font-size: large;
+}
+.gap-even-holding *{
+  width:18%;
+  text-align:left;
+  font-size: large;
+  padding: 10px;
+
+  }
+.red-btn{
+  text-align: center;
+  width: 12%;
+  margin:0 2% ;
+
+}
+.bg-grad{
+  background: radial-gradient(rgba(0, 0, 0, 0.435),rgba(0,0,0,0) 50%);
+}
+.bgblur{
+  backdrop-filter: blur(50px);
+}
+.modal{
+  z-index: -20;
+ 
+}
