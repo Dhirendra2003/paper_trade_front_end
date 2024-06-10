@@ -10,7 +10,7 @@ export default function AdminHome() {
 
   useEffect(() => {
     // Fetch users
-    axios.get('http://localhost:4400/users')
+    axios.get('https://paper-trade-back-end-1.onrender.com/users')
       .then(response => {
         if (response.data.status === 'success') {
           setUsers(response.data.users);
@@ -23,7 +23,7 @@ export default function AdminHome() {
       });
 
     // Fetch all trades
-    axios.post('http://localhost:4400/allhistory', { admin: true })
+    axios.post('https://paper-trade-back-end-1.onrender.com/allhistory', { admin: true })
       .then(response => {
         if (response.data.trades) {
           setAllTrades(response.data.trades);
