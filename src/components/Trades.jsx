@@ -9,7 +9,7 @@ export default function Trades() {
 
   const fetchTradeHistory = async (email) => {
     try {
-      const response = await axios.post('http://localhost:4400/historyuser', { mail: email });
+      const response = await axios.post('https://paper-trade-back-end-1.onrender.com/historyuser', { mail: email });
       return response.data.tradeHistory || [];
     } catch (error) {
       console.error('Error fetching trade history:', error);

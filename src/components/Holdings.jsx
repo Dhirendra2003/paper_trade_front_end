@@ -12,7 +12,7 @@ export default function Holdings() {
     const fetchHoldings = async () => {
       try {
         const user = JSON.parse(localStorage.getItem('user'));
-        const response = await axios.post('http://localhost:4400/userholdings', { mail: user.mail });
+        const response = await axios.post('https://paper-trade-back-end-1.onrender.com/userholdings', { mail: user.mail });
         console.log(response.data, "1st");
         setHoldings(response.data.holdings);
         setAmount(response.data.moneyt); // Assuming the response data contains the total invested amount

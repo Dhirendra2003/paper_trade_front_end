@@ -12,7 +12,7 @@ export default function Holding() {
     const fetchHoldings = async () => {
       try {
         const user = JSON.parse(localStorage.getItem('user'));
-        const response = await axios.post('http://localhost:4400/userholdings', { mail: user.mail });
+        const response = await axios.post('https://paper-trade-back-end-1.onrender.com/userholdings', { mail: user.mail });
         setHoldings(response.data.holdings);
         setAmount(response.data.moneyt);
 
@@ -53,7 +53,7 @@ export default function Holding() {
     const oppositeTradeType = tradeType === "Buy" ? "Sell" : "Buy";
     try {
       const user = JSON.parse(localStorage.getItem('user'));
-      const response = await axios.post('http://localhost:4400/trade', {
+      const response = await axios.post('https://paper-trade-back-end-1.onrender.com/trade', {
         "symbol": symbol,
         "qty": qty,
         "price": lastPrices[holding.symbol],

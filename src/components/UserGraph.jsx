@@ -13,7 +13,7 @@ export default function UserGraph() {
     const fetchHoldingsTotal = async () => {
       try {
         const user = JSON.parse(localStorage.getItem('user'));
-        const response = await axios.post('http://localhost:4400/holdingstotal', { mail: user.mail });
+        const response = await axios.post('https://paper-trade-back-end-1.onrender.com/holdingstotal', { mail: user.mail });
         console.log(response.data);
         if (response.data.status === 'success') {
           setHoldingsTotal(response.data.holdingsTotal);

@@ -9,7 +9,7 @@ export default function BuySell(props) {
     if(tType && total ){ 
     
     console.log(email, symbol,qty,price,total,ttype)
-      axios.post('http://localhost:4400/trade',{
+      axios.post('https://paper-trade-back-end-1.onrender.com/trade',{
         "symbol": symbol,
         "qty": qty,
         "price": (custom? custom:price),

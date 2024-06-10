@@ -14,7 +14,7 @@ export default function LoginPage() {
 
   const handleSubmit = async () => {
     try {
-      const result = await axios.post('http://localhost:4400/login', { mail: email, pass: pass });
+      const result = await axios.post('https://paper-trade-back-end-1.onrender.com/login', { mail: email, pass: pass });
       console.log(result);
       const { status, msg, user } = result.data;
       if (status === 'success') {

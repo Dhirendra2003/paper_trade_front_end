@@ -29,7 +29,7 @@ export default function Plans() {
       window.location.href='/login'
       return
     }
-    fetch('http://localhost:4400/setpro', {
+    fetch('https://paper-trade-back-end-1.onrender.com/setpro', {
       method: 'POST', // Assuming it's a POST request based on the example response
       headers: {
         'Content-Type': 'application/json'
